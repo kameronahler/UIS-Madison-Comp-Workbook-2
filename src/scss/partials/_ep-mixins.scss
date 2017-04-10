@@ -1,0 +1,92 @@
+//mixins
+@mixin bp($bp) {
+    @if $bp=='xs' {
+        @media screen and (min-width: 30em) {
+            @content
+        }
+    }
+    @elseif $bp=='md' {
+        @media screen and (min-width: 46.25em) {
+            @content
+        }
+    }
+    @elseif $bp=='lg' {
+        @media screen and (min-width: 61.25em) {
+            @content
+        }
+    }
+    @elseif $bp=='max-xs' {
+        @media screen and (max-width: 29.99em) {
+            @content
+        }
+    }
+    @elseif $bp=='max-md' {
+        @media screen and (max-width: 46.24em) {
+            @content
+        }
+    }
+    @elseif $bp=='max-lg' {
+        @media screen and (max-width: 61.24em) {
+            @content
+        }
+    }
+}
+
+@mixin flex($justify:null, $align:null) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin reset-box-sizing {
+    html {
+        box-sizing: border-box;
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absolute ($top:null, $left:null, $right:null, $bottom:null) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    @content;
+}
+
+@mixin font($px){
+    font-size:#{($px / 16)}rem;
+}
+
+@mixin font-family{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* ------------------------
+Don't really use anymore
+--------------------------- */
+@mixin reset-lists {
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+}
+
+@mixin reset-buttons {
+    button {
+        border: initial;
+        background: initial;
+    }
+}

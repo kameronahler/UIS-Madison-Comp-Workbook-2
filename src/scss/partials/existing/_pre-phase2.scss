@@ -1,0 +1,192 @@
+// language links at top of page
+#block-bean-homepage-language{
+	float: right;
+}
+
+#block-search-form{
+	margin-top: 0;
+}
+
+// existing comparison mapping brightpage
+.page-node-106 .intro .field-name-field-bp-bean-body > .field-items > .field-item p {
+    display: none
+}
+
+.page-node-106 .intro h4,
+.page-node-106 .intro h5 {
+    font-size: 15px;
+    font-size: .9375rem;
+    line-height: 1.45;
+    font-weight: normal;
+    font-weight: 600;
+    box-sizing: border-box;
+    margin: 0 auto
+}
+
+@media (min-width:34em) {
+    .page-node-106 .intro h4,
+    .page-node-106 .intro h5 {
+        text-align: justify;
+        font-size: 18px;
+        font-size: 1.125rem;
+        width: 80%
+    }
+}
+
+.page-node-106 .intro h4 {
+    margin-bottom: 1em
+}
+
+.page-node-106 .intro h5 {
+    font-weight: 400
+}
+
+.node-type-brightpages .mason-item,
+.page-node-106 #webform-client-form-316 {
+    padding-top: 0
+}
+
+.page-node-106 .map .webform-sync-map-location-fields {
+    text-align: center;
+    position: relative;
+    bottom: 5.5em
+}
+
+.webform-sync-map-location-fields .form-type-textfield {
+    width: calc(100% - 30px)
+}
+
+@media (min-width:61.25em) {
+    .webform-sync-map-location-fields .form-type-textfield {
+        width: calc(66.66% - 30px)
+    }
+}
+
+.page-node-106 .map .left-map-title,
+.page-node-106 .map .right-map-title {
+    text-align: center;
+    font-size: 18px;
+    font-size: 1.125rem;
+    box-sizing: border-box;
+    padding: .5em
+}
+
+.page-node-106 .map .left-map-title {
+    background: #495153;
+    outline: 2px solid #495153;
+    color: #00b4a9;
+    position: relative;
+    top: 2em
+}
+
+.page-node-106 .map .right-map-title {
+    background: #00b4a9;
+    outline: 2px solid #00b4a9;
+    color: #495153;
+    position: relative;
+    top: 2em
+}
+
+.page-node-106 .webform-component-sync-map {
+    margin-top: 0
+}
+
+.page-node-106 .map .webform-component-textarea,
+.page-node-106 .map .webform-component-textfield,
+.page-node-106 .map .webform-component-email   {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 0
+}
+.page-node-106 .map .webform-component-textarea{
+	padding: 1em;
+}
+
+.page-node-106 .map .webform-component-textfield,
+.page-node-106 .map .webform-component-email{
+	padding:  0 1em;
+}
+
+.page-node-106 .map .description {
+    text-align: center;
+    font-style: italic
+}
+
+@media (min-width:46.25em) {
+    .page-node-106 .map .webform-component-textarea,
+    .page-node-106 .map .webform-component-textfield,
+    .page-node-106 .map .webform-component-email {
+        width: 50%;
+        float: left
+    }
+    
+    .page-node-106 .map .webform-component-textfield,
+    .page-node-106 .map .webform-component-email{
+    	margin: .5em auto;
+    	
+    }    
+    
+    .page-node-106 .map .webform-component--general-comments {
+        margin: 0 auto
+    }
+}
+
+.page-node-106 .map .webform-component-textarea label,
+.page-node-106 .map .webform-component-textfield label {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto 0.3625em;
+    min-height:3em;
+}
+
+.page-node-106 .map .webform-component-textfield label {
+	margin-top: .375em;
+}
+
+.page-node-106 .map textarea,
+.page-node-106 .map input[type="text"],
+.page-node-106 .map input[type="email"] {
+    margin: 0 auto 1.45em;
+    background: #f5f5f5;
+    resize: none;
+    margin-bottom: .25em;
+    width:100%;
+}
+.page-node-106 .map textarea{
+    min-height: 8em;	
+}
+
+.page-node-106 .map input[type="submit"] {
+    display: block;
+    width: 80%;
+    float: none;
+    clear: both;
+    margin: 2em auto;
+    background: #b13a29;
+    font-size: 18px;
+    font-size: 1.125rem;
+    padding: 1em
+}
+
+@media (min-width:46.25em) {
+    .page-node-106 .map input[type="submit"] {
+        width: 33%;
+        padding: .5em;
+	    margin: 0 1em 0 auto;
+	    position: relative;        
+    }
+}
+
+.page-node-106 #map-right .leaflet-control-zoom {
+    display: none
+}
+
+@media (min-width:46.25em) {
+    .page-node-106 .webform-component--existing-legend,
+    .page-node-106 .webform-component--legend {
+        width: 50%!important;
+        float: left
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "madison-comp-workbook-2",
+  "version": "1.0.0",
+  "description": "workbook 2 styling, restyle some older stuff",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kameron ahler",
+  "license": "ISC"
+}
