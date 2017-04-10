@@ -7,35 +7,35 @@ Engaging Plans Styling Boilerplate
 /* -----------------
 EP Mixins (required)
 ----------------- */
-@import "../EP/src/scss/partials/ep-mixins";
+@import "partials/ep-mixins";
 
 
 /* -----------------
 Momentum scrolling not working on touch devices
 ----------------- */
-@import "../EP/src/scss/partials/momentum-scrolling/momentum-scrolling";
+@import "partials/momentum-scrolling/momentum-scrolling";
 
 
 /* -----------------
 Accessibility Concerns
 -----------------*/
 // Font scaling
-@import "../EP/src/scss/partials/fonts/global";
-@import "../EP/src/scss/partials/fonts/participate";
-@import "../EP/src/scss/partials/fonts/events";
-@import "../EP/src/scss/partials/fonts/contact";
-@import "../EP/src/scss/partials/fonts/open-question";
+// @import "partials/fonts/global";
+// @import "partials/fonts/participate";
+// @import "partials/fonts/events";
+// @import "partials/fonts/contact";
+// @import "partials/fonts/open-question";
 // AA Color Contrast
-@import "../EP/src/scss/partials/colors/global";
+@import "partials/colors/global";
 
 
 /* -----------------
 Brightpages 3.0
 -----------------*/
-@import "../EP/src/scss/partials/bp3/_01-base";
-@import "../EP/src/scss/partials/bp3/_02-layout";
-@import "../EP/src/scss/partials/bp3/_04-state";
-@import "../EP/src/scss/partials/bp3/_05-theme";
+@import "partials/bp3/_01-base";
+@import "partials/bp3/_02-layout";
+@import "partials/bp3/_04-state";
+@import "partials/bp3/_05-theme";
 // this has styles for bundles from dola but is left out by default
 // @import "partials/bp3/_03-modules";
 
@@ -43,12 +43,16 @@ Brightpages 3.0
 /* -------------------
 Webform Page Styling
 ---------------------- */
-@import "../EP/src/scss/partials/webforms/webforms";
+// @import "partials/webforms/webforms";
 
 
 /* ----------------------------
 Webforms With Grid Questions
 ------------------------------- */
 /* Fix for grid question type styling - especially mobile */
-@import "partials/grid-questions/grid-questions";
+// @import "partials/grid-questions/grid-questions";
 
+/* -------------------
+Project Specific
+---------------------- */
+@import "partials/existing/_pre-phase2";
