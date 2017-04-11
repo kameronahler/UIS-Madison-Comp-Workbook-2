@@ -1,32 +1,4 @@
 /* --------------------------------
-vars explained
-----------------------------------*/
-// main nav text color, homepage timeline header and footer background color, individual page h1s, banner background colors, participate card header background colors
-$color-primary: #1763af;
-
-// button colors – intended for white text
-$color-secondary: #5d9b4a;
-
-// block title colors for homepage and sidebars – need to be darker because they are on a gray background
-$color-home-block-h2: darken($color-primary,5%);
-
-// homepage and events page timeline icon color
-$color-timeline-icon-bg: #485052;
-
-// event page
-$color-events-time:darken($color-primary,10%);
-
-// postscript area More links
-$color-postscript-link:#a2ccde;
-
-// footer area links
-$color-footer-link:#e6f1f6;
-
-// footer area text (non-links)
-$color-footer-body:#f0f0f0; // non-links in footer - bg #686e70
-
-
-/* --------------------------------
 top nav
 ----------------------------------*/
 #block-system-main-menu ul li a {

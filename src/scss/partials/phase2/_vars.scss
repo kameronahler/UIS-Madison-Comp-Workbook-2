@@ -1,0 +1,36 @@
+/* --------------------------------
+workbook 2
+----------------------------------*/
+$color-blue:#1763af;
+$color-cyan:#269ebf;
+$color-green:#57a552;
+$color-orange:#f37e55;
+$color-purple:#844398;
+$color-darkpurple:#5d4a9d;
+
+/* --------------------------------
+for partials/color/_global.scss
+----------------------------------*/
+// main nav text color, homepage timeline header and footer background color, individual page h1s, banner background colors, participate card header background colors
+$color-primary: #1763af;
+
+// button colors – intended for white text
+$color-secondary: #5d9b4a;
+
+// block title colors for homepage and sidebars – need to be darker because they are on a gray background
+$color-home-block-h2: darken($color-primary,5%);
+
+// homepage and events page timeline icon color
+$color-timeline-icon-bg: #485052;
+
+// event page
+$color-events-time:darken($color-primary,10%);
+
+// postscript area More links
+$color-postscript-link:#a2ccde;
+
+// footer area links
+$color-footer-link:#e6f1f6;
+
+// footer area text (non-links)
+$color-footer-body:#f0f0f0; // non-links in footer - bg #686e70

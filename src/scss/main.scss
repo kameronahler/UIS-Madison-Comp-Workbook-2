@@ -7,7 +7,12 @@ Engaging Plans Styling Boilerplate
 /* -----------------
 EP Mixins (required)
 ----------------- */
-@import "partials/ep-mixins";
+@import "partials/mixins";
+
+/* -----------------
+Vars
+----------------- */
+@import "partials/phase2/vars";
 
 
 /* -----------------
@@ -56,3 +61,4 @@ Webforms With Grid Questions
 Project Specific
 ---------------------- */
 @import "partials/existing/_pre-phase2";
+@import "partials/phase2/landing";
