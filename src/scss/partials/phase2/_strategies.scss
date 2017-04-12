@@ -83,51 +83,51 @@
             }
         }
 
-        &--strategy1 {
-            color: $color-purple;
+        &--vibrantandcreative {
+            color: $color-vibrantandcreative;
 
             &:hover{
-            	background:$color-purple;
+            	background:$color-vibrantandcreative;
             	color:#fff;
             }
         }
-        &--strategy2 {
-            color: $color-blue;
+        &--formandconnection {
+            color: $color-formandconnection;
 
             &:hover{
-            	background:$color-blue;
+            	background:$color-formandconnection;
             	color:#fff;
             }
         }
-        &--strategy3 {
-            color: $color-cyan;
+        &--housingandneighborhoods {
+            color: $color-housingandneighborhoods;
 
             &:hover{
-            	background:$color-cyan;
+            	background:$color-housingandneighborhoods;
             	color:#fff;
             }
         }
-        &--strategy4 {
-            color: $color-darkpurple;
+        &--opportunityandprosperity {
+            color:$color-opportunityandprosperity;
 
             &:hover{
-            	background:$color-darkpurple;
+            	background:$color-opportunityandprosperity;
             	color:#fff;
             }
         }
-        &--strategy5 {
-            color: $color-green;
+        &--servicesandfacilities {
+            color: $color-servicesandfacilities;
 
             &:hover{
-            	background:$color-green;
+            	background:$color-servicesandfacilities;
             	color:#fff;
             }
         }
-        &--strategy6 {
-            color: $color-orange;
+        &--greenandresilient {
+            color:$color-greenandresilient;
 
             &:hover{
-            	background:$color-orange;
+            	background:$color-greenandresilient;
             	color:#fff;
             }
         }

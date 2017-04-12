@@ -16,7 +16,8 @@ breadcrumb
 --------------------------*/
 .page-node-108,
 .page-node-109,
-.page-node-114{
+.page-node-114,
+.page-node-115{
 	.breadcrumb{
 		@include hide;
 	}
@@ -27,7 +28,8 @@ h1
 --------------------------*/
 .page-node-108,
 .page-node-109,
-.page-node-114 { 
+.page-node-114,
+.page-node-115 { 
 	h1.title{
 		@include hide;
 	}
@@ -43,9 +45,9 @@ in page nav
 			@include hide;
 		}
 		@include bp(md){
-			@include absolute(-16px,-16px);
+			@include absolute(-16pxi,-16pxi);
 			background:#f8f8f8;
-			width:calc(100% + 32px);
+			width:calc(100% + 32pxi);
 			padding:1rem;
 			text-align:center;
 			header{
@@ -62,5 +64,53 @@ in page nav
 				margin:0 0 0 1rem;
 			}
 		}
+	}
+}
+
+/* -------------------------
+idea wall specific
+--------------------------*/
+.node-type-bold-ideas{
+	.node-bold-ideas > div:nth-child(2){
+		margin-top:0 !important
+	}
+
+	.workbook2-inpagenav{
+		@include bp(max-md){
+			@include hide;
+		}
+		@include bp(md){
+			@include absolute(-16pxi,-16pxi);
+			background:#f8f8f8;
+			width:calc(100% + 32pxi);
+			padding:1rem;
+			text-align:center;
+			header{
+				display:inline;
+			}
+			ul{
+				display:inline;
+				margin-left:0;
+				padding-left:0;
+				list-style:none;
+			}
+			li{
+				display:inline-block;
+				margin:0 0 0 1rem;
+			}
+		}
+	}
+	.title-background{
+		display:none;
+	}
+	.share-links{
+		width:150px;
+		text-align:center;
+		padding-left:0;
+		display:block;
+		margin:2rem auto 0;
+	}
+	.rate-widget-thumbs_up_custom .thumb-up{
+		background:rgba(white,.5)
 	}
 }

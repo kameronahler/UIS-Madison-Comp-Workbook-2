@@ -102,3 +102,43 @@ Don't really use anymore
         background: initial;
     }
 }
+
+@mixin idea-wall-colors($page-node,$color){
+    &.page-node-#{$page-node}{
+        .comment-wrapper:nth-of-type(5n+1) .comment-inner{
+            background: $color;
+
+            &::after{
+                border-color: transparent $color transparent transparent
+            }
+        }
+        .comment-wrapper:nth-of-type(5n+2) .comment-inner{
+            background: darken(adjust-hue($color,-30deg),15%);
+
+            &::after{
+                border-color: transparent darken(adjust-hue($color,-30deg),15%) transparent transparent
+            }
+        }
+        .comment-wrapper:nth-of-type(5n+3) .comment-inner{
+            background: adjust-hue($color,30deg);
+
+            &::after{
+                border-color: transparent adjust-hue($color,30deg) transparent transparent
+            }
+        }
+        .comment-wrapper:nth-of-type(5n+4) .comment-inner{
+            background: darken(adjust-hue($color,30deg),15%);
+
+            &::after{
+                border-color: transparent darken(adjust-hue($color,30deg),15%) transparent transparent
+            }
+        }
+        .comment-wrapper:nth-of-type(5n+5) .comment-inner{
+            background: adjust-hue($color,-30deg);
+
+            &::after{
+                border-color: transparent adjust-hue($color,-30deg) transparent transparent
+            }
+        }
+    }
+}

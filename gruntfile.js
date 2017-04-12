@@ -143,7 +143,7 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: 'src/scss/**/*.scss',
-                tasks: ['sass:dev', 'postcss:dev', 'notify:sass'],
+                tasks: ['sass:dev','px_to_rem:dev','postcss:dev', 'notify:sass'],
                 options: {
                     livereload: true
                 }
