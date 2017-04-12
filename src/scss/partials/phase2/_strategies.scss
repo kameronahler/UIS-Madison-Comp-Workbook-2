@@ -1,0 +1,139 @@
+.workbook2-strategies-page {
+    @extend .workbook2-landing-page
+}
+
+.strategies-header {
+    h2 {
+        margin-bottom: 1.5rem !important;
+        text-align: center;
+        color: $color-green !important;
+        @include bp(md) {
+            margin-bottom: 3rem !important;
+        }
+    }
+    img {
+        display: block;
+        margin: 0 auto 2rem;
+    }
+}
+
+.strategies-header__description {
+    @include bp(lg) {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+.strategies-header__instructions {
+    font-family: QuicksandBold, sans-serif;
+    color: $color-green;
+    text-align: center;
+    font-size: 1rem;
+    @include bp(md) {
+        background: $color-green;
+        color: #fff;
+        margin: 2rem 0 1.5rem;
+        padding: 2rem;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 1rem;
+    }
+    @include bp(lg) {
+        max-width: 600px;
+        margin: 2rem auto 1.5rem;
+    }
+}
+
+.strategies-nav {
+    >ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .strategies-nav-item {
+        &:nth-child(even) {
+            .strategies-nav-item__img-wrapper {
+                order: 2;
+            }
+        }
+        &--strategy1 {
+            background: $color-purple;
+            color: rgba(white, .85);
+        }
+        &--strategy2 {
+            background: $color-blue;
+            color: rgba(white, .85);
+        }
+        &--strategy3 {
+            background: $color-cyan;
+            color: rgba(white, .85);
+        }
+        &--strategy4 {
+            background: $color-darkpurple;
+            color: rgba(white, .85);
+        }
+        &--strategy5 {
+            background: $color-green;
+            color: rgba(white, .85);
+        }
+        &--strategy6 {
+            background: $color-orange;
+            color: rgba(white, .85);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            @include bp(md) {
+                display: flex;
+                justify-content: flex-start;
+                align-items: stretch;
+            }
+        }
+        &__img-wrapper {
+            display: block;
+            background: no-repeat transparent url('http://unsplash.it/400/400') 50%;
+            background-size: cover;
+            height: 200px;
+            margin-bottom: 1rem;
+            @include bp(md) {
+                width: 66%;
+                margin-bottom: 0;
+            }
+        }
+        &__description-title {
+            h3 {
+                text-align: center;
+                color: inherit;
+            }
+        }
+        &__description-wrapper {
+            @include bp(md) {
+                padding: 1.5rem;
+                width: 34%;
+            }
+        }
+        &__description-list {
+            margin: 0 auto 2rem;
+            padding: 0;
+            color: inherit;
+            text-align: center;
+            @include bp(md) {
+                width: 100%;
+                margin: 0 0 0 2rem;
+                text-align: left;
+            }
+            li {
+                display: inline-block;
+                margin: 0 1rem;
+                @include bp(md) {
+                    display: list-item;
+                    margin: 0;
+                }
+                &:not(:first-child) {
+                    margin: .25rem 0;
+                }
+            }
+        }
+    }
+}

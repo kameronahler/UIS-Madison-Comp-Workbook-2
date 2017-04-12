@@ -1,0 +1,137 @@
+/* intro wrapper */
+.workbook2-landing-page{
+	margin-top:2rem;
+	margin-bottom:-2.5rem;
+
+	@include bp(md){
+		margin-bottom:-2rem;
+	}
+}
+
+/* intro descripion */
+.landing-intro__header{
+	h2{
+		margin-bottom:1.5rem !important;
+		text-align:center;
+		color:$color-blue !important;
+
+		@include bp(md){
+			margin-bottom:3rem !important;
+		}
+	}
+	img{
+		display:block;
+		margin:0 auto 2rem;
+	}
+}
+
+/* intro descripion */
+.landing-intro__description{
+	@include bp(md){
+		background:$color-blue;
+		padding:2rem;
+		border-radius:4px;
+	}
+	@include bp(lg){
+		max-width:600px;
+		margin-left:auto;
+		margin-right:auto
+	}
+
+	p{
+		text-align:justify;
+
+		@include bp(md){
+			color:rgba(white,.85);
+			margin:0 auto 1rem;
+		}
+		
+		// cta
+		&.landing-intro__instructions{
+			font-size:1rem;
+			text-align:center;
+			color:$color-blue;
+			font-family:QuicksandBold,sans-serif;
+			margin:1.5rem 0;
+
+			@include bp(md){
+				color:#fff;
+				margin:2rem 0 0;
+			}
+		}
+	}
+}
+
+/* form */
+.webform-client-form-113{
+	
+	// upper wrapper
+	.webform-component{
+		box-sizing:border-box;
+		margin:0 0 2rem;
+
+		@include bp(lg){
+			min-height:200px;
+			float:left;
+			width:calc(50% - 2rem);
+			margin:0 1rem 2rem;
+			padding:1.5rem;
+			border-radius:4px;
+			background:#fafafa;;
+		}
+
+		// title labels
+		> label{
+			color: $color-darkpurple;
+			text-align:center;
+
+			@include bp(md){
+				text-align:left;
+				margin-bottom:1.5rem;
+			}
+			@include bp(lg){
+				position:relative;
+				margin:-1.5rem -1.5rem 1.5rem;
+				background:$color-darkpurple;
+				color:#fff;
+				border-radius:4px 4px 0 0;
+				padding:10px 10px 10px 50px;
+				min-height:67px;
+			}
+			
+			// icon
+			&::before{
+				@include bp(lg){
+					content:"";
+					@include absolute(10px,10px);
+					height:30px;
+					width:30px;
+					background:white;
+					border-radius:50%;
+				}
+			}
+		}
+
+		// text inputs
+		.form-text{
+			width:100%;
+		}
+
+	}
+	// submit button (no wrapper)
+	.form-actions{
+		text-align:center;
+		margin:0 auto;
+		clear:both;
+
+		input[type="submit"]{
+			width:33.33334%;
+			display:inline-block;
+			margin:0 auto;
+			float:none;
+			padding:1rem 1.5rem;
+		}
+
+	}
+}
+
