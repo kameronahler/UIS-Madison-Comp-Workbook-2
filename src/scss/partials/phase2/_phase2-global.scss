@@ -1,6 +1,15 @@
 /* -------------------------
 fonts
 --------------------------*/
+.h2--workbook2{
+	font-size:26px !important;
+	line-height:1.2;
+}
+
+.p--workbook2-lead{
+	font-size:1rem;
+	line-height:1.75;
+}
 
 /* -------------------------
 breadcrumb
@@ -30,6 +39,28 @@ in page nav
 --------------------------*/
 .page-node-114{
 	.workbook2-inpagenav{
-
+		@include bp(max-md){
+			@include hide;
+		}
+		@include bp(md){
+			@include absolute(-16px,-16px);
+			background:#f8f8f8;
+			width:calc(100% + 32px);
+			padding:1rem;
+			text-align:center;
+			header{
+				display:inline;
+			}
+			ul{
+				display:inline;
+				margin-left:0;
+				padding-left:0;
+				list-style:none;
+			}
+			li{
+				display:inline-block;
+				margin:0 0 0 1rem;
+			}
+		}
 	}
 }
