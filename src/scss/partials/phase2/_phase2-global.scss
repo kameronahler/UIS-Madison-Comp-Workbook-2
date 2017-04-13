@@ -2,8 +2,15 @@
 fonts
 --------------------------*/
 .h2--workbook2{
+	font-family:Quicksand,sans-serif !important;
+	font-weight:700;
 	font-size:26px !important;
 	line-height:1.2;
+}
+
+.h3--workbook2{
+	font-family:Quicksand,sans-serif;
+	font-weight:700;
 }
 
 .p--workbook2-lead{
@@ -17,7 +24,8 @@ breadcrumb
 .page-node-108,
 .page-node-109,
 .page-node-114,
-.page-node-115{
+.page-node-115,
+.page-node-106{
 	.breadcrumb{
 		@include hide;
 	}
@@ -29,7 +37,8 @@ h1
 .page-node-108,
 .page-node-109,
 .page-node-114,
-.page-node-115 { 
+.page-node-115,
+.page-node-106 { 
 	h1.title{
 		@include hide;
 	}
@@ -112,5 +121,37 @@ idea wall specific
 	}
 	.rate-widget-thumbs_up_custom .thumb-up{
 		background:rgba(white,.5)
+	}
+}
+
+
+/* -------------------------
+mapping specific
+--------------------------*/
+.page-node-106{
+	.workbook2-inpagenav{
+		@include bp(max-md){
+			@include hide;
+		}
+		@include bp(md){
+			@include absolute(-26pxi,-16pxi);
+			background:#f8f8f8;
+			width:100%;
+			padding:1rem;
+			text-align:center;
+			header{
+				display:inline;
+			}
+			ul{
+				display:inline;
+				margin-left:0;
+				padding-left:0;
+				list-style:none;
+			}
+			li{
+				display:inline-block;
+				margin:0 0 0 1rem;
+			}
+		}
 	}
 }

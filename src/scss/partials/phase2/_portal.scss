@@ -38,7 +38,8 @@
 	font-size:1rem;
 	text-align:center;
 	color:$color-orange;
-	font-family:QuicksandBold,sans-serif;
+	font-family:Quicksand,sans-serif;
+	font-weight:700;
 	margin:1.5rem 0;
 
 	@include bp(md){
@@ -73,7 +74,8 @@
 		margin-bottom:1rem;
 
 		span{
-			font-family:QuicksandBold,sans-serif;
+			font-family:Quicksand,sans-serif;
+			font-weight:700;
 			display:block;
 			color:$color-orange;
 			font-size:1rem;

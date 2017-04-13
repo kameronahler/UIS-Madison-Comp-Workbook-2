@@ -55,6 +55,10 @@
 				columns:2;
 				text-align:left;
 			}
+			@include bp(lg){
+				width:600px;
+				margin:0 auto 1rem;
+			}
 		}
 
 		&__button{
@@ -69,7 +73,7 @@
 
 			&:hover{
 				background:transparent;
-				border:none;
+				border-color:transparent;
 			}
 
 			&:active,
@@ -102,8 +106,6 @@
 				font-size:1rem;
 				display:block;
 				margin:1rem auto .5rem;
-				border:none;
-				text-decoration:underline;
 			}
 			p{
 				margin: 0 0 1rem !important;
@@ -112,16 +114,28 @@
 	}
 	&-cta{
 		margin:1rem auto 2rem !important;
-		width:61.875%;
 		padding:1.5rem !important;
 		border-radius:4px;
-	
+			
+		@include bp(lg){
+			width:600px;
+		}
 		p{
 			text-align:center !important;
 			font-size:1rem;
-			font-family:QuicksandBold,sans-serif !important;
+			font-family:Quicksand,sans-serif !important;
+			font-weight:700;
 			color:#fff;
-			padding-left:0 !important
+			padding-left:0 !important;
+
+			&:not(:first-child){
+				margin-top:1rem;
+				display:block;
+			}
+			
+			a{
+				color:#fff;
+			}
 		}
 
 		&--vibrantandcreative{
