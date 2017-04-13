@@ -1,5 +1,16 @@
 .workbook2-mapping-page{
-	padding-top: 60pxi;
+	@include bp(md){
+		padding-top: 60pxi;
+	}
+}
+
+.page-node-106{
+	.workbook2-inpagenav{
+		@include bp(md){
+			@include absolute(-26pxi,-16pxi)
+			width:100%;
+		}
+	}
 }
 
 .mapping-intro{

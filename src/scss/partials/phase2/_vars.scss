@@ -15,10 +15,13 @@ $color-servicesandfacilities:$color-darkpurple;
 $color-greenandresilient:$color-green;
 $color-mapping:#00b4a9;
 
+
 $text-shadow-body:0 0 6px rgba(black,.375);
 
 $box-shadow-card: 0 6px 8px -3px rgba(black,.2);
 $box-shadow-card--hover: 0 6px 8px -3px rgba(black,.3);
+
+$linear-gradient-inpagenav:linear-gradient(90deg,rgba($color-blue,.75),rgba($color-cyan,.75));
 
 /* --------------------------------
 for partials/color/_global.scss
@@ -27,7 +30,7 @@ for partials/color/_global.scss
 $color-primary: #1763af;
 
 // button colors – intended for white text
-$color-secondary: #5d9b4a;
+$color-secondary: #57a552;
 
 // block title colors for homepage and sidebars – need to be darker because they are on a gray background
 $color-home-block-h2: darken($color-primary,5%);

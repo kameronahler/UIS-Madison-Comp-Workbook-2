@@ -1,6 +1,18 @@
 .workbook2-strategies-page {
     @extend .workbook2-landing-page;
-    margin-top:4rem;
+
+    margin-top:0;
+    @include bp(md){
+    	margin-top:4rem;
+    }
+}
+
+.page-node-114{
+	.workbook2-inpagenav{
+		@include bp(md){
+			@include absolute(-16pxi,-16pxi);
+		}
+	}
 }
 
 .strategies-header {

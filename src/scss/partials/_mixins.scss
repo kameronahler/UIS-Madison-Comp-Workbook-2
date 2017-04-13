@@ -103,6 +103,10 @@ Don't really use anymore
     }
 }
 
+
+
+
+// Project Specific Mixins
 @mixin idea-wall-colors($page-node,$color){
     &.page-node-#{$page-node}{
         .comment-wrapper:nth-of-type(5n+1) .comment-inner{
@@ -139,6 +143,71 @@ Don't really use anymore
             &::after{
                 border-color: transparent adjust-hue($color,-30deg) transparent transparent
             }
+        }
+    }
+}
+
+@mixin inpagenav{
+    @include bp(md){
+        background:$linear-gradient-inpagenav;
+        width:calc(100% + 32pxi);
+        padding:1rem;
+        text-align:center;
+    }
+
+    header{
+        text-align:center;
+        font-family:Quicksand,sans-serif;
+        font-weight:700;
+        color:$color-blue;
+
+        @include bp(md){
+            color:#fff;
+            display:inline;
+            text-shadow:1px 1px 6px rgba(black,.25);
+        }
+    }       
+    ul{
+        display:block;
+        margin-left:0;
+        padding-left:0;
+        list-style:none;
+        text-align:center;
+        margin-bottom:2rem;
+
+        @include bp(md){
+            display:inline;
+            margin-bottom:0;
+        }
+    }
+    li{
+        display:inline-block;
+        margin:1rem 0 1rem 1rem;
+
+        @include bp(md){
+            margin:0 0 0 1rem;
+        }
+
+        &:first-child{
+            margin-left:0;
+
+            @include bp(md){
+                margin-left:1rem;
+            }
+        }
+    }
+    a{
+        background:$color-green;
+        border-radius:4px;
+        color:#fff;
+        padding:.5rem;
+        text-decoration:none;
+        font-family:Quicksand,sans-serif;
+        font-weight:700;
+        box-shadow:$box-shadow-card;
+        transition: background-color .3s ease-out;
+        &:hover {
+            background-color: darken($color-green, 5%);
         }
     }
 }
