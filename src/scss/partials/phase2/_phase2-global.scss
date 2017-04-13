@@ -27,7 +27,8 @@ breadcrumb
 .page-node-109,
 .page-node-114,
 .page-node-115,
-.page-node-106{
+.page-node-106,
+.page-node-124{
 	.breadcrumb{
 		@include hide;
 	}
@@ -40,7 +41,8 @@ h1
 .page-node-109,
 .page-node-114,
 .page-node-115,
-.page-node-106 { 
+.page-node-106,
+.page-node-124 { 
 	h1.title{
 		@include hide;
 	}

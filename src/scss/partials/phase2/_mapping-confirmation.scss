@@ -1,0 +1,14 @@
+.page-node-124{
+	.workbook2-portal-page{
+		@include bp(md){
+			padding-top: 40pxi;
+		}
+	}
+
+	.workbook2-inpagenav{
+		@include bp(md){
+			@include absolute(-26pxi,-16pxi);
+			width:100%;
+		}
+	}
+}
