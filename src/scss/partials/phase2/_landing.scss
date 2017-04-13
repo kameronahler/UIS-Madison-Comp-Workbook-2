@@ -85,6 +85,7 @@
 		> label{
 			color: $color-darkpurple;
 			text-align:center;
+			font-size:1rem;
 
 			@include bp(md){
 				text-align:left;
@@ -126,11 +127,14 @@
 		clear:both;
 
 		input[type="submit"]{
-			width:33.33334%;
-			display:inline-block;
+			@include button--form;
+			font-size:1rem;
 			margin:0 auto;
 			float:none;
-			padding:1rem 1.5rem;
+
+			@include bp(md){
+				width:33.33334%;
+			}
 		}
 
 	}

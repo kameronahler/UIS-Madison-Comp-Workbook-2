@@ -211,3 +211,14 @@ Don't really use anymore
         }
     }
 }
+
+@mixin button--form{
+    padding:1rem 1.5rem !important;
+    font-family:Quicksand, sans-serif !important;
+    font-weight:700 !important;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+        background-color: darken($color-secondary, 5%);
+    }
+}

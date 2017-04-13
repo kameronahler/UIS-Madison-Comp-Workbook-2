@@ -31,6 +31,7 @@
 }
 
 .ideawall{
+	padding:10pxi;
 	&-header{
 		position:static;
 
@@ -190,6 +191,72 @@
 		}
 	}
 }
+
+// comment form
+.node-type-bold-ideas{
+	#comment-form{
+		width:100%;
+		padding:10pxi;
+
+		@include bp(lg){
+			max-width:600px;
+			padding:0;
+		}
+	}
+
+	//inputs
+	.form-item-name,
+	.form-item-mail{
+		@media screen and(min-width:30em){
+			width:calc(50% - .5rem)!important;
+			margin-bottom:.5rem !important;
+		}
+		input{
+			width:100%;
+		}
+	}
+
+	.form-item-name{
+		margin-right:1rem !important;
+	}
+	.form-item-mail{
+		margin-right:0 !important;
+	}
+	.grippie{
+		display:none;
+	}
+	.comment-links{
+		font-family:Quicksand, sans-serif !important;
+		font-weight:700;
+		a{
+			color:$color-green !important;
+		}
+	}
+	
+	// character counter
+	#edit-comment-body-und-0-value-counter{
+		text-align:right;
+		margin-bottom:1rem;
+	}
+
+	//button
+	#comment-form #edit-actions input{
+		@include button--form;
+		background:$color-green;
+		font-size:1rem;
+		transition: background-color.3s ease-in-out !important;
+
+		&:hover{
+			opacity:1;
+		}
+
+		@include bp(md){
+			width:33.33334%;
+		}
+	}
+	
+}
+
 
 // idea wall comment colors
 .node-type-bold-ideas {

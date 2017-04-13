@@ -55,24 +55,4 @@ in page nav
 }
 
 
-/* -------------------------
-idea wall specific
---------------------------*/
-.node-type-bold-ideas{
-	.node-bold-ideas > div:nth-child(2){
-		margin-top:0 !important
-	}
-	.title-background{
-		display:none;
-	}
-	.share-links{
-		width:150px;
-		text-align:center;
-		padding-left:0;
-		display:block;
-		margin:2rem auto 0;
-	}
-	.rate-widget-thumbs_up_custom .thumb-up{
-		background:rgba(white,.5)
-	}
-}
+
