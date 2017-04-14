@@ -19,6 +19,13 @@ Vars
 
 
 /* -----------------
+EP Mixins (required)
+----------------- */
+@import "partials/phase2/keyframes";
+
+
+
+/* -----------------
 Momentum scrolling not working on touch devices
 ----------------- */
 @import "partials/momentum-scrolling/momentum-scrolling";

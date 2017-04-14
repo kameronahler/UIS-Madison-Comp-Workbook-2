@@ -4,7 +4,16 @@
 	margin-bottom:-2.5rem;
 
 	@include bp(md){
+		margin-top:0;
 		margin-bottom:-2rem;
+	}
+}
+
+/* hero */
+.page-node-108{
+	.workbook2-hero{
+		background: transparent url('https://images.unsplash.com/photo-1485331129317-1717811a2b75?dpr=2&auto=format&fit=crop&w=1500&h=827&q=80&cs=tinysrgb&crop=&bg=') no-repeat 100%;
+		background-size: cover;
 	}
 }
 
@@ -19,10 +28,6 @@
 			margin-bottom:3rem !important;
 		}
 	}
-	img{
-		display:block;
-		margin:0 auto 2rem;
-	}
 }
 
 /* intro descripion */
@@ -31,6 +36,7 @@
 		background:$color-blue;
 		padding:2rem;
 		border-radius:4px;
+		box-shadow:$box-shadow-card;
 	}
 	@include bp(lg){
 		max-width:600px;
@@ -71,6 +77,13 @@
 		box-sizing:border-box;
 		margin:0 0 2rem;
 
+		&:hover{
+			@include bp(md){
+				box-shadow: $box-shadow-card;
+				transition: .3s ease-in-out box-shadow;
+			}
+		}
+
 		@include bp(lg){
 			min-height:220px;
 			float:left;
@@ -83,7 +96,7 @@
 
 		// title labels
 		> label{
-			color: $color-darkpurple;
+			color: $color-green;
 			text-align:center;
 			font-size:1rem;
 
@@ -94,7 +107,7 @@
 			@include bp(lg){
 				position:relative;
 				margin:-1.5rem -1.5rem 1.5rem;
-				background:$color-darkpurple;
+				background:$color-green;
 				color:#fff;
 				border-radius:4px 4px 0 0;
 				padding:10px 10px 10px 50px;
@@ -117,6 +130,13 @@
 		// text inputs
 		.form-text{
 			width:100%;
+		}
+
+		// age question
+		&.webform-component--what-is-your-age{
+			input{
+				background:#ddd;
+			}
 		}
 
 	}

@@ -2,6 +2,15 @@
 	@extend .workbook2-landing-page
 }
 
+
+.page-node-109{
+	.workbook2-hero{
+		background: transparent url('https://images.unsplash.com/photo-1478147427282-58a87a120781?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=') no-repeat 50% 100%;
+		background-size: cover;
+	}
+}
+
+
 .portal-header{
 	h2{
 		margin-bottom:1.5rem !important;
@@ -41,6 +50,7 @@
 	font-family:Quicksand,sans-serif;
 	font-weight:700;
 	margin:1.5rem 0;
+	box-shadow:$box-shadow-card;
 
 	@include bp(md){
 		background:$color-orange;
@@ -58,6 +68,15 @@
 	@include bp(md){
 		display:block;
 	}
+
+	svg{
+		line{
+			stroke:$color-blue;
+		}
+		polyline{
+			stroke:$color-blue;
+		}
+	}
 }
 
 .portal-nav__item{
@@ -72,6 +91,22 @@
 		display:block;
 		text-decoration:none;
 		margin-bottom:1rem;
+
+		@include bp(md){
+			padding:1rem;
+		}
+
+		&:hover{
+			@include bp(md){
+				background:$color-orange;
+				transition:.3s ease-in-out;
+				
+				span{
+					color:#fff;
+					transition:.3s ease-in-out;
+				}
+			}
+		}
 
 		span{
 			font-family:Quicksand,sans-serif;

@@ -1,60 +1,154 @@
 /* -------------------------
 fonts
 --------------------------*/
-.h2--workbook2{
-	font-family:Quicksand,sans-serif !important;
-	font-weight:700;
-	font-size:26px !important;
-	line-height:1.2;
+
+.h2--workbook2 {
+    font-family: Quicksand, sans-serif !important;
+    font-weight: 700;
+    font-size: 26px !important;
+    line-height: 1.2;
 }
 
-.h3--workbook2{
-	font-family:Quicksand,sans-serif;
-	font-weight:700;
+.h3--workbook2 {
+    font-family: Quicksand, sans-serif;
+    font-weight: 700;
 }
 
-.p--workbook2-lead{
-	font-size:1rem;
-	@include bp(md){
-		line-height:1.75;
-	}
+.p--workbook2-lead {
+    font-size: 1rem;
+    @include bp(md) {
+        line-height: 1.75;
+    }
 }
+
 
 /* -------------------------
 breadcrumb
 --------------------------*/
+
 .page-node-108,
 .page-node-109,
 .page-node-114,
 .page-node-115,
 .page-node-106,
-.page-node-124{
-	.breadcrumb{
-		@include hide;
-	}
+.page-node-124 {
+    .breadcrumb {
+        @include hide;
+    }
 }
+
 
 /* -------------------------
 h1
 --------------------------*/
+
 .page-node-108,
 .page-node-109,
 .page-node-114,
 .page-node-115,
 .page-node-106,
-.page-node-124 { 
-	h1.title{
-		@include hide;
-	}
+.page-node-124 {
+    h1.title {
+        @include hide;
+    }
 }
 
 
 /* -------------------------
 in page nav
 --------------------------*/
-.workbook2-inpagenav{
-	@include inpagenav;
+
+.workbook2-inpagenav {
+    @include bp(md){
+        background:$linear-gradient-inpagenav;
+        width:calc(100% + 32pxi);
+        padding:1rem;
+        text-align:center;
+    }
+
+    header{
+        text-align:center;
+        font-family:Quicksand,sans-serif;
+        font-weight:700;
+        color:$color-blue;
+
+        @include bp(md){
+            color:#fff;
+            display:inline;
+            text-shadow:1px 1px 6px rgba(black,.25);
+        }
+    }       
+    ul{
+        display:block;
+        margin-left:0;
+        padding-left:0;
+        list-style:none;
+        text-align:center;
+        margin-bottom:2rem;
+
+        @include bp(md){
+            display:inline;
+            margin-bottom:0;
+        }
+    }
+    li{
+        display:inline-block;
+        margin:1rem 0 1rem 1rem;
+
+        @include bp(md){
+            margin:0 0 0 1rem;
+        }
+
+        &:first-child{
+            margin-left:0;
+
+            @include bp(md){
+                margin-left:1rem;
+            }
+        }
+    }
+    a{
+        background:$color-green;
+        border-radius:4px;
+        color:#fff;
+        padding:.5rem;
+        text-decoration:none;
+        font-family:Quicksand,sans-serif;
+        font-weight:700;
+        box-shadow:$box-shadow-card;
+        transition: background-color .3s ease-out;
+        &:hover {
+            background-color: darken($color-green, 5%);
+        }
+    }
 }
 
 
+/* -------------------------
+hero
+--------------------------*/
+
+.workbook2-hero {
+    @include bp(md) {
+        position: relative;
+        top: -49pxi;
+        left: -39pxi;
+        width: 700pxi;
+        height: 200px;
+    }
+    @include bp(lg) {
+        width: 940pxi;
+    }
+    &::before {
+        @include bp(md) {
+            @include absolute(0,0);
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: $linear-gradient-hero;
+            opacity:0;
+            animation:fade-in 1s ease-in-out 1s forwards;
+        }
+    }
+}
 
