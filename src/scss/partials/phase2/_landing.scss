@@ -71,6 +71,7 @@
 
 /* form */
 .webform-client-form-113{
+	font-family:"Helvetica Neue",$font-system;
 	
 	// upper wrapper
 	.webform-component{
@@ -78,7 +79,7 @@
 		margin:0 0 2rem;
 
 		&:hover{
-			@include bp(md){
+			@include bp(lg){
 				box-shadow: $box-shadow-card;
 				transition: .3s ease-in-out box-shadow;
 			}
@@ -110,20 +111,70 @@
 				background:$color-green;
 				color:#fff;
 				border-radius:4px 4px 0 0;
-				padding:10px 10px 10px 50px;
-				min-height:67px;
+				padding:10px;
+				vertical-align:middle;
 			}
-			
-			// icon
+			// icon general styling
 			&::before{
+				@extend .workbook2-icon;
+				margin-right:6pxi;
+				vertical-align:middle;
+				font-size:20px;
+
 				@include bp(lg){
-					content:"";
-					@include absolute(10px,10px);
-					height:30px;
-					width:30px;
-					background:white;
-					border-radius:50%;
+					margin-right:8pxi;
+					font-size:30px;
 				}
+			}
+		}
+
+		// icons for each question
+		&--what-part-of-madison-do-you-live-in{
+			> label{
+				&::before{
+					@extend .workbook2-icon-location:before;
+				}
+			}
+		}
+		&--what-is-your-age{
+			> label{
+				&::before{
+					@extend .workbook2-icon-age:before;
+				}
+			}
+		}
+		&--what-is-your-race{
+			> label{
+				&::before{
+					@extend .workbook2-icon-race:before;
+				}
+			}
+		}
+		&--what-is-your-gender{
+			> label{
+				&::before{
+					@extend .workbook2-icon-transgender:before;
+				}
+			}
+		}
+		&--do-you-identify-as-transgender{
+			> label{
+				&::before{
+					@extend .workbook2-icon-identity:before;
+				}
+			}
+		}
+		&--what-is-your-household-income{
+			> label{
+				&::before{
+					@extend .workbook2-icon-income:before;
+				}
+			}
+		}
+		// min height
+		.form-radios{
+			@include bp(lg){
+				min-height:116px;
 			}
 		}
 
@@ -140,6 +191,9 @@
 		}
 
 	}
+
+
+
 	// submit button (no wrapper)
 	.form-actions{
 		text-align:center;
@@ -156,7 +210,6 @@
 				width:33.33334%;
 			}
 		}
-
 	}
 }
 
