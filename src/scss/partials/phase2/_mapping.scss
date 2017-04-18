@@ -1,6 +1,6 @@
 .workbook2-mapping-page{
 	@include bp(md){
-		padding-top: 60pxi;
+		padding-top: 40pxi;
 	}
 }
 
@@ -18,13 +18,15 @@
 		position:static;
 
 		h2 {
-	        margin-bottom: 1.5rem !important;
+	        margin-bottom: 3rem !important;
 	        text-align: center;
 	   		color:$color-mapping !important;
 	    }
 	    img {
 	        display: block;
-	        margin: 0 auto 2rem;
+	        margin: 0 auto;
+	        max-height:40vh;
+	        width:auto;
 	    }
 	    p{
 	    	@include bp(lg){
@@ -116,27 +118,17 @@
 
 // legends
 .page-node-106{
-	.webform-component--existing-legend,
-	.webform-component--future-legend{
+	.webform-component--existing-legend{
 		margin-bottom:1rem;
-
+		
 		img{
-			width:100%;
+			@include bp(md){
+				max-width:61.875%;
+			}
 		}
 		@include bp(md){
-			width:calc(50% - 10pxi) !important;
-			float:left;
-			margin-top:0;
-			margin-bottom:2rem;
-		}
-	}
-	.webform-component--future-legend{
-		@include bp(max-md){
-			margin-bottom:3rem;
-		}
-
-		@include bp(md){
-			margin-left:20pxi;
+			width:100% !important;
+			text-align:center;
 		}
 	}
 }

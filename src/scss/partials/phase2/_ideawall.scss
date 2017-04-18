@@ -94,12 +94,13 @@
 		}
 
 		ul{
-			list-style-position:inside;
 			text-align:center;
-			margin-left:0;
-			padding-left:0;
+			list-style:none;
+			margin:0 auto;
+			width:80%;
 			
 			@include bp(md){
+				list-style:disc;
 				columns:2;
 				text-align:left;
 			}
@@ -177,12 +178,7 @@
 			font-size:1rem;
 			font-family:Quicksand,sans-serif !important;
 			font-weight:700;
-			color:$color-purple;
 			padding-left:0 !important;
-
-			@include bp(md){
-				color:#fff;
-			}
 
 			&:not(:first-child){
 				margin-top:1rem;
@@ -201,6 +197,73 @@
 		&--vibrantandcreative{
 			@include bp(md){
 				background:$color-vibrantandcreative;
+			}
+			p{
+				color:$color-vibrantandcreative;
+				
+				@include bp(md){
+					color:#fff;
+				}
+			}
+		}
+		&--formandconnection{
+			@include bp(md){
+				background:$color-formandconnection;
+			}
+			p{
+				color:$color-formandconnection;
+				
+				@include bp(md){
+					color:#fff;
+				}
+			}
+		}
+		&--housingandneighborhoods{
+			@include bp(md){
+				background:$color-housingandneighborhoods;
+			}
+			p{
+				color:$color-housingandneighborhoods;
+				
+				@include bp(md){
+					color:#fff;
+				}
+			}
+		}
+		&--opportunityandprosperity{
+			@include bp(md){
+				background:$color-opportunityandprosperity;
+			}
+			p{
+				color:$color-opportunityandprosperity;
+				
+				@include bp(md){
+					color:#fff;
+				}
+			}
+		}
+		&--servicesandfacilities{
+			@include bp(md){
+				background:$color-servicesandfacilities;
+			}
+			p{
+				color:$color-servicesandfacilities;
+				
+				@include bp(md){
+					color:#fff;
+				}
+			}
+		}
+		&--greenandresilient{
+			@include bp(md){
+				background:$color-greenandresilient;
+			}
+			p{
+				color:$color-greenandresilient;
+				
+				@include bp(md){
+					color:#fff;
+				}
 			}
 		}
 	}
@@ -276,4 +339,9 @@
 // idea wall comment colors
 .node-type-bold-ideas {
 	@include idea-wall-colors(115,$color-vibrantandcreative);
+	@include idea-wall-colors(116,$color-formandconnection);
+	@include idea-wall-colors(117,$color-housingandneighborhoods);
+	@include idea-wall-colors(119,$color-opportunityandprosperity);
+	@include idea-wall-colors(120,$color-servicesandfacilities);
+	@include idea-wall-colors(118,$color-greenandresilient);
 }

@@ -117,31 +117,31 @@ Don't really use anymore
             }
         }
         .comment-wrapper:nth-of-type(5n+2) .comment-inner{
-            background: darken(adjust-hue($color,-30deg),15%);
+            background: darken(adjust-hue($color,-15deg),7.5%);
 
             &::after{
-                border-color: transparent darken(adjust-hue($color,-30deg),15%) transparent transparent
+                border-color: transparent darken(adjust-hue($color,-15deg),7.5%) transparent transparent
             }
         }
         .comment-wrapper:nth-of-type(5n+3) .comment-inner{
-            background: adjust-hue($color,30deg);
+            background: adjust-hue($color,15deg);
 
             &::after{
-                border-color: transparent adjust-hue($color,30deg) transparent transparent
+                border-color: transparent adjust-hue($color,15deg) transparent transparent
             }
         }
         .comment-wrapper:nth-of-type(5n+4) .comment-inner{
-            background: darken(adjust-hue($color,30deg),15%);
+            background: darken(adjust-hue($color,15deg),7.5%);
 
             &::after{
-                border-color: transparent darken(adjust-hue($color,30deg),15%) transparent transparent
+                border-color: transparent darken(adjust-hue($color,15deg),7.5%) transparent transparent
             }
         }
         .comment-wrapper:nth-of-type(5n+5) .comment-inner{
-            background: adjust-hue($color,-30deg);
+            background: adjust-hue($color,-15deg);
 
             &::after{
-                border-color: transparent adjust-hue($color,-30deg) transparent transparent
+                border-color: transparent adjust-hue($color,-15deg) transparent transparent
             }
         }
     }
