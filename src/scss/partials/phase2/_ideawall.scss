@@ -109,19 +109,26 @@
 
 		ul{
 			text-align:left;
-			margin:0 auto;
-			
-			// @include bp(md){
-			// 	list-style:disc;
-			// 	columns:2;
-			// }
+			margin:0 auto -1em;
+			list-style:none;
+			list-style-position:inside;
+			padding-left:20pxi;
+
 			@include bp(lg){
 				width:600px;
-				margin:0 auto 1rem;
 			}
 
 			li{
 				margin-bottom:1rem;
+				position:relative;
+				&::before{
+					@include absolute(4pxi,-24pxi);
+					content:"";
+					display:block;
+					width:1em;
+					height:1em;
+					background:transparent no-repeat 50% url('/files/icon-logo.svg');
+				}
 			}
 		}
 

@@ -1,4 +1,8 @@
 /* -------------------------
+wut
+--------------------------*/
+
+/* -------------------------
 fonts
 --------------------------*/
 
@@ -103,6 +107,7 @@ in page nav
         font-family:Quicksand,sans-serif;
         font-weight:700;
         color:$color-blue;
+        z-index:1;
 
         @include bp(md){
             color:#fff;

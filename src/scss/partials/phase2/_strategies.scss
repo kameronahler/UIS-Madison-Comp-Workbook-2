@@ -76,7 +76,6 @@
      	}
     }
     .strategies-nav-item {
-    	padding-bottom: 1rem;
     	margin-bottom:2rem;
     	background:#f8f8f8;
     	transition:.3s ease-in-out;
@@ -94,95 +93,206 @@
             padding-bottom:0;
             width:calc(33.33334% - 1.25rem);
         }
-
+        
         &:hover{
-            @include bp(md){
-				.strategies-nav-item__img-wrapper{
-					opacity:.8;
-				}
+			.strategies-nav-item__img-wrapper{
+				&::after{
+                    @include bp(md){
+                        opacity:1;
+                        transition:opacity .3s ease-in-out .3s;                 
+                    }
+                }
+                &::before{
+                    @include bp(md){
+                        opacity:.75
+                    }
+                }
 			}
     	}		    	
 
         &--vibrantandcreative {
-            color: $color-vibrantandcreative;
+    		background:$color-vibrantandcreative;
+        	color:#fff;
 
-            &:hover{
-            	@include bp(md){
-            		background:$color-vibrantandcreative;
-	            	color:#fff;
-	            }
+            .strategies-nav-item__img-wrapper{
+                background-image: url('/files/workbook2-imagery-cultureandcharacter_prod.jpg');
+                background-position: 50% 50%;
+
+                &::before{
+                    background-color: rgba($color-vibrantandcreative,.75);
+                }
             }
         }
         &--formandconnection {
-            color: $color-formandconnection;
+    		background:$color-formandconnection;
+        	color:#fff;
 
-            &:hover{
-            	@include bp(md){
-            		background:$color-formandconnection;
-	            	color:#fff;
-	            }
+            .strategies-nav-item__img-wrapper{
+                background-image: url('/files/workbook2-imagery-formandconnectivity_prod.jpg');
+                background-position: 50% 50%;
+
+                &::before{
+                    background-color: rgba($color-formandconnection,.75);
+                }
             }
         }
         &--housingandneighborhoods {
-            color: $color-housingandneighborhoods;
+    		background:$color-housingandneighborhoods;
+        	color:#fff;
 
-            &:hover{
-            	@include bp(md){
-            		background:$color-housingandneighborhoods;
-	            	color:#fff;
-	            }
+            .strategies-nav-item__img-wrapper{
+                background-image: url('/files/workbook2-imagery-neighborhoodsandhousing_prod.jpg');
+                background-position: 50% 50%;
+
+                &::before{
+                    background-color: rgba($color-housingandneighborhoods,.75);
+                }
             }
         }
         &--opportunityandprosperity {
-            color:$color-opportunityandprosperity;
+    		background:$color-opportunityandprosperity;
+        	color:#fff;
 
-            &:hover{
-            	@include bp(md){
-            		background:$color-opportunityandprosperity;
-	            	color:#fff;
-	            }
+            .strategies-nav-item__img-wrapper{
+                background-image: url('/files/workbook2-imagery-economyandopportunity_prod.jpg');
+                background-position: 50% 50%;
+
+                &::before{
+                    background-color: rgba($color-opportunityandprosperity,.75);
+                }
             }
         }
         &--servicesandfacilities {
-            color: $color-servicesandfacilities;
+    		background:$color-servicesandfacilities;
+        	color:#fff;
 
-            &:hover{
-            	@include bp(md){
-            		background:$color-servicesandfacilities;
-	            	color:#fff;
-	            }
+            .strategies-nav-item__img-wrapper{
+                background-image: url('/files/workbook2-imagery-servicesandfacilities_prod.jpg');
+                background-position: 50% 50%;
+
+                &::before{
+                    background-color: rgba($color-servicesandfacilities,.75);
+                }
             }
         }
         &--greenandresilient {
-            color:$color-greenandresilient;
+    		background:$color-greenandresilient;
+        	color:#fff;
+            
+            .strategies-nav-item__img-wrapper{
+                background-image: url('/files/workbook2-imagery-greenandresilient_prod.jpg');
+                background-position: 50% 50%;
 
-            &:hover{
-            	@include bp(md){
-            		background:$color-greenandresilient;
-	            	color:#fff;
-	            }
+                &::before{
+                    background-color: rgba($color-greenandresilient,.75);
+                }
             }
         }
 
         a {
+            position:relative;
             text-decoration: none;
             color: inherit;
             display:block;
             height:100%;
             padding-bottom:1rem;
+
+            @include bp(md){
+                padding-bottom:0;
+            }
+
+            &.active{
+                &:hover{
+                    &::before{
+                        @include bp(md){
+                            opacity:0; 
+                        }
+                    }
+
+                    .strategies-nav-item__img-wrapper{
+                        &::after{
+                            @include bp(md){
+                                opacity:1;
+                            }
+                        }
+                    }
+                    .strategies-nav-item__description-title,
+                    .strategies-nav-item__description-wrapper{
+                        opacity:.5
+                    }
+                }
+                &::before{
+                    @include absolute(0,0);
+                    @include flex(center,center);
+                    font-family:"icomoon";
+                    content:"\e906";
+                    width:100%;
+                    height:100%;
+                    text-align:center;
+                    color:rgba(white,.875);
+                    font-size:150pxi;
+                    z-index:3;
+
+                    @include bp(md){
+                        font-size:100pxi;
+                        transition:opacity .3s ease-in-out;
+                    }
+                }
+                .strategies-nav-item__img-wrapper {
+                    &::after{
+                        opacity:.5;
+                        @include bp(md){
+                            opacity:0;
+                        }
+                    }
+                }
+                .strategies-nav-item__description-title,
+                .strategies-nav-item__description-wrapper{
+                    opacity:.5
+                }
+            }
         }
 
         &__img-wrapper {
+            position:relative;
             display: block;
-            background: no-repeat transparent url('http://unsplash.it/600/300?image=591') 50%;
+            background-color:transparent;
+            background-repeat: no-repeat;
             background-size: cover;
             min-height: 200px;
             margin-bottom: 2rem;
-            transition:.3s opacity ease-in-out;
 
             @include bp(md) {
             	height:initial;
                 margin-bottom: 0;
+            }
+
+            &::after{
+                @include absolute(12.5%,12.5%);
+                content:"";
+                width:75%;
+                height:75%;
+                z-index:2;
+                background:url(/files/icon-logo.svg) no-repeat 50%;
+                opacity:1;
+                transition:opacity .3s ease-in-out;
+
+                @include bp(md){
+                    opacity:0;
+                }
+            }
+
+            &::before{
+                @include absolute(0,0);
+                content:"";
+                width:100%;
+                height:100%;
+                z-index:1;
+                transition:opacity .3s ease-in-out;
+
+                @include bp(md){
+                    opacity:0;
+                }
             }
         }
 
@@ -190,6 +300,7 @@
             h3 {
                 text-align: center;
                 color: inherit;
+                text-shadow:$text-shadow-card;
             }
         }
         &__description-wrapper {
@@ -204,6 +315,7 @@
             padding: 0;
             color: inherit;
             text-align: center;
+            font-weight:700;
             @include bp(md) {
                 width: 100%;
                 margin: 0 0 0 0;
@@ -213,6 +325,7 @@
             li {
                 display: inline-block;
                 margin: .5rem 1rem;
+                text-shadow:$text-shadow-card;
                 @include bp(md) {
                     display: list-item;
                     margin: 0;
