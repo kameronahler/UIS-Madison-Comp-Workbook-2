@@ -178,6 +178,7 @@
             background-size: cover;
             min-height: 200px;
             margin-bottom: 2rem;
+            transition:.3s opacity ease-in-out;
 
             @include bp(md) {
             	height:initial;

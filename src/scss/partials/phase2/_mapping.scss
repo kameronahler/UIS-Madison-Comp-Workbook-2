@@ -68,6 +68,10 @@
 		}
 
 		&-info-container{
+			max-width:600px;
+			margin-left:auto;
+			margin-right:auto;
+
 			button{
 				font-size:1rem;
 				display:block;
@@ -171,18 +175,24 @@
 		.webform-component-textarea{
 			padding:0;
 			margin-bottom:2rem;
+
 			@include bp(md){
 				width:100%;
 			}
 
 			textarea{
 				padding:1rem;
-
+				
+				&:focus,
 				&:hover{
 					@include bp(md){
 						box-shadow:$box-shadow-card;
 						transition:.3s box-shadow ease-in-out;
+						transition:.3s box-shadow ease-in-out;
 					}
+				}
+				&:focus{
+					background:#fff;
 				}
 			}
 		}

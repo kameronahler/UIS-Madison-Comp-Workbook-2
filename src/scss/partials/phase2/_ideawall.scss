@@ -28,6 +28,20 @@
 			@include absolute(-16pxi,-16pxi)
 		}
 	}
+	// user voted
+
+	.thumb-up{
+		background-color:transparent !important;
+	}
+	.rate-button{
+		background-color:rgba(white,.5);
+		border-radius:4px;
+
+		&.user-voted{
+			background-color:transparent;
+			cursor:default;
+		}
+	}
 }
 
 .ideawall{
@@ -94,19 +108,20 @@
 		}
 
 		ul{
-			text-align:center;
-			list-style:none;
+			text-align:left;
 			margin:0 auto;
-			width:80%;
 			
-			@include bp(md){
-				list-style:disc;
-				columns:2;
-				text-align:left;
-			}
+			// @include bp(md){
+			// 	list-style:disc;
+			// 	columns:2;
+			// }
 			@include bp(lg){
 				width:600px;
 				margin:0 auto 1rem;
+			}
+
+			li{
+				margin-bottom:1rem;
 			}
 		}
 
@@ -151,6 +166,10 @@
 		}
 
 		&__info-container{
+			max-width:600px;
+			margin-left:auto;
+			margin-right:auto;
+			
 			button{
 				font-size:1rem;
 				display:block;
@@ -345,3 +364,5 @@
 	@include idea-wall-colors(120,$color-servicesandfacilities);
 	@include idea-wall-colors(118,$color-greenandresilient);
 }
+
+

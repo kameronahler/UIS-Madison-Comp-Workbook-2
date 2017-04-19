@@ -29,6 +29,11 @@ backgrounds
 .page-node-109,
 .page-node-114,
 .page-node-115,
+.page-node-116,
+.page-node-117,
+.page-node-118,
+.page-node-119,
+.page-node-120,
 .page-node-106,
 .page-node-124 {
     .region-content-inner{
@@ -47,6 +52,11 @@ breadcrumb
 .page-node-109,
 .page-node-114,
 .page-node-115,
+.page-node-116,
+.page-node-117,
+.page-node-118,
+.page-node-119,
+.page-node-120,
 .page-node-106,
 .page-node-124 {
     .breadcrumb {
@@ -63,6 +73,11 @@ h1
 .page-node-109,
 .page-node-114,
 .page-node-115,
+.page-node-116,
+.page-node-117,
+.page-node-118,
+.page-node-119,
+.page-node-120,
 .page-node-106,
 .page-node-124 {
     h1.title {
@@ -164,7 +179,10 @@ hero
             height: 100%;
             background: $linear-gradient-hero;
             opacity:0;
-            animation:fade-in 1s ease-in-out 1s forwards;
+            animation:fade-in 1s ease-in-out .75s forwards;
+        }
+        @include bp(md) {
+            animation:fade-in 1s ease-in-out .5s forwards;
         }
     }
 }
