@@ -2,7 +2,7 @@
 	position:relative;
 	padding-top: 32pxi;
 	@include bp(md){
-		padding-top: 80pxi;
+		padding-top: 60pxi;
 	}
 }
 
@@ -75,7 +75,12 @@
 	    }
 	    img {
 	        display: block;
-	        margin: 0 auto 2rem;
+	        margin: 0 auto;
+	        width:auto;
+
+	        @include bp(md){
+	        	max-height:30vh;
+	        }
 	    }
 	}
 

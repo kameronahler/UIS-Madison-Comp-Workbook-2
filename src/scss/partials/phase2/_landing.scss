@@ -74,6 +74,13 @@
 /* form */
 .webform-client-form-113{
 	font-family:"Helvetica Neue",$font-system;
+
+	> div{
+		@include bp(lg){
+			@include flex(space-between,flex-start);
+			flex-wrap:wrap;
+		}
+	}
 	
 	// upper wrapper
 	.webform-component{
@@ -89,9 +96,8 @@
 
 		@include bp(lg){
 			min-height:220px;
-			float:left;
-			width:calc(50% - 2rem);
-			margin:0 1rem 2rem;
+			width:calc(50% - 1rem);
+			margin:0 0 2rem;
 			padding:1.5rem;
 			border-radius:4px;
 			background:#f8f8f8;;
@@ -202,6 +208,9 @@
 		margin:0 auto;
 		clear:both;
 
+		@include bp(lg){
+			width:100%;
+		}
 		input[type="submit"]{
 			@include button--form;
 			font-size:1rem;

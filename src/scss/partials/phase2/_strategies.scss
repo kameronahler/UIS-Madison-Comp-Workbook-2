@@ -99,7 +99,7 @@
 				&::after{
                     @include bp(md){
                         opacity:1;
-                        transition:opacity .3s ease-in-out .3s;                 
+                        transition:opacity .3s ease-in-out .15s;                 
                     }
                 }
                 &::before{
@@ -119,7 +119,10 @@
                 background-position: 50% 50%;
 
                 &::before{
-                    background-color: rgba($color-vibrantandcreative,.75);
+                    background-color: $color-vibrantandcreative;
+                }
+                &::after{
+                    background-image: url('/files/imagery-strategy-cultureandcharacter.svg');
                 }
             }
         }
@@ -132,7 +135,10 @@
                 background-position: 50% 50%;
 
                 &::before{
-                    background-color: rgba($color-formandconnection,.75);
+                    background-color: $color-formandconnection;
+                }
+                &::after{
+                    background-image: url('/files/imagery-strategy-formandconnectivity.svg');
                 }
             }
         }
@@ -145,7 +151,10 @@
                 background-position: 50% 50%;
 
                 &::before{
-                    background-color: rgba($color-housingandneighborhoods,.75);
+                    background-color: $color-housingandneighborhoods;
+                }
+                &::after{
+                    background-image: url('/files/imagery-strategy-neighborhoodsandhousing.svg');
                 }
             }
         }
@@ -158,7 +167,10 @@
                 background-position: 50% 50%;
 
                 &::before{
-                    background-color: rgba($color-opportunityandprosperity,.75);
+                    background-color: $color-opportunityandprosperity;
+                }
+                &::after{
+                    background-image: url('/files/imagery-strategy-economyandopportunity.svg');
                 }
             }
         }
@@ -171,7 +183,10 @@
                 background-position: 50% 50%;
 
                 &::before{
-                    background-color: rgba($color-servicesandfacilities,.75);
+                    background-color: $color-servicesandfacilities;
+                }
+                &::after{
+                    background-image: url('/files/imagery-strategy-servicesandfacilities.svg');
                 }
             }
         }
@@ -184,7 +199,10 @@
                 background-position: 50% 50%;
 
                 &::before{
-                    background-color: rgba($color-greenandresilient,.75);
+                    background-color: $color-greenandresilient;
+                }
+                &::after{
+                    background-image: url('/files/imagery-strategy-greenandresilient.svg');
                 }
             }
         }
@@ -200,7 +218,7 @@
             @include bp(md){
                 padding-bottom:0;
             }
-
+            
             &.active{
                 &:hover{
                     &::before{
@@ -218,7 +236,9 @@
                     }
                     .strategies-nav-item__description-title,
                     .strategies-nav-item__description-wrapper{
-                        opacity:.5
+                        @include bp(md){
+                            opacity:1;
+                        }
                     }
                 }
                 &::before{
@@ -230,7 +250,7 @@
                     height:100%;
                     text-align:center;
                     color:rgba(white,.875);
-                    font-size:150pxi;
+                    font-size:125pxi;
                     z-index:3;
 
                     @include bp(md){
@@ -241,14 +261,22 @@
                 .strategies-nav-item__img-wrapper {
                     &::after{
                         opacity:.5;
+
                         @include bp(md){
                             opacity:0;
+                        }
+                    }
+                    &::before{
+                        @include bp(md){
+                            opacity:.875
                         }
                     }
                 }
                 .strategies-nav-item__description-title,
                 .strategies-nav-item__description-wrapper{
-                    opacity:.5
+                    @include bp(md){
+                        opacity:.5;
+                    }
                 }
             }
         }
@@ -265,6 +293,8 @@
             @include bp(md) {
             	height:initial;
                 margin-bottom: 0;
+                border-radius: 4px 4px 0 0;
+                overflow: hidden;
             }
 
             &::after{
@@ -273,7 +303,9 @@
                 width:75%;
                 height:75%;
                 z-index:2;
-                background:url(/files/icon-logo.svg) no-repeat 50%;
+                background-repeat:no-repeat;
+                background-position:50% 50%;
+                background-color:transparent;
                 opacity:1;
                 transition:opacity .3s ease-in-out;
 
@@ -289,9 +321,12 @@
                 height:100%;
                 z-index:1;
                 transition:opacity .3s ease-in-out;
+                opacity:.625;
 
                 @include bp(md){
-                    opacity:0;
+                    opacity:.25;
+                    border-radius: 4px 4px 0 0;
+                    overflow: hidden;
                 }
             }
         }

@@ -122,17 +122,16 @@
 
 // legends
 .page-node-106{
-	.webform-component--existing-legend{
+	.webform-component--existing-legend,
+	.webform-component--future-legend{
 		margin-bottom:1rem;
-		
-		img{
-			@include bp(md){
-				max-width:61.875%;
-			}
-		}
+		float:none;
+		width:100% !important;
+
 		@include bp(md){
-			width:100% !important;
 			text-align:center;
+			width:50% !important;
+			float:left;
 		}
 	}
 }
